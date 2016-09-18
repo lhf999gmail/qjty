@@ -1,0 +1,1290 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"lookup",
+				"LookupValue"
+			],
+			[
+				"con",
+				"Controller"
+			],
+			[
+				"lis",
+				"lists"
+			],
+			[
+				"Pr",
+				"ProjectName"
+			],
+			[
+				"from",
+				"Fromusername"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Application/Home/Model/WeixinModel.class.php",
+			"settings":
+			{
+				"buffer_size": 11062,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Application/Home/Controller/WeixinController.class.php",
+			"settings":
+			{
+				"buffer_size": 11964,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Application/Home/Controller/AuthGroupController.class.php",
+			"settings":
+			{
+				"buffer_size": 13985,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Addons/Wecome/Model/WeixinAddonModel.class.php",
+			"settings":
+			{
+				"buffer_size": 10408,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Addons/Orienteering/Controller/TaskActionController.class.php",
+			"settings":
+			{
+				"buffer_size": 2791,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Addons/Orienteering/Controller/TaskController.class.php",
+			"settings":
+			{
+				"buffer_size": 3631,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Addons/Vote/Model/VoteOptionModel.class.php",
+			"settings":
+			{
+				"buffer_size": 3413,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Addons/Vote/Model/VoteModel.class.php",
+			"settings":
+			{
+				"buffer_size": 1386,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Addons/Orienteering/Model/TaskActionModel.class.php",
+			"settings":
+			{
+				"buffer_size": 3514,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Addons/WeiSite/Controller/FooterController.class.php",
+			"settings":
+			{
+				"buffer_size": 4207,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 6381 files for \"scan\" (regex, whole word)\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Card/Model/WeixinAddonModel.class.php:\n   36  	\n   37  	// 扫描带参数二维码事件\n   38: 	public function scan() {\n   39  		return true;\n   40  	}\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering/Model/WeixinAddonModel.class.php:\n   26  	}\n   27  \n   28: 	function scan($dataArr, $keywordArr = array(), $config = array()) {\n   29  		$map ['scene_id'] = ltrim ( $dataArr ['EventKey'], 'qrscene_' );\n   30  		$map ['token'] = get_token ();\n   ..\n   44  	}\n   45  \n   46: 	function scan($dataArr)\n   47  	{\n   48  \n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Payment/Controller/Tenpay/common/util/HttpClientUtil.php:\n   67  	}\n   68  	\n   69: 	// scan url\n   70  	function _scan_url()\n   71  	{\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Payment/Model/WeixinAddonModel.class.php:\n   25  	\n   26  	// 扫描带参数二维码事件\n   27: 	public function scan() {\n   28  		return true;\n   29  	}\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Wecome/keyword.php:\n    3  		'subscribe' => 'Wecome',\n    4  		'unsubscribe' => 'Wecome',\n    5: 		'scan' => 'Wecome',\n    6  		'获取内测码' => 'Wecome',\n    7  		'自动检测' => 'Wecome' \n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Wecome/Model/WeixinAddonModel.class.php:\n   27  			$has_return = false;\n   28  			if (! empty ( $dataArr ['EventKey'] )) {\n   29: 				$has_return = $this->scan ( $dataArr, $keywordArr );\n   30  			}\n   31  			if ($has_return)\n   32  				return true;\n   33: 		} elseif ($dataArr ['Content'] == 'scan') {\n   34: 			$this->scan ( $dataArr, $keywordArr, $config );\n   35  		} elseif ($dataArr ['Content'] == 'unsubscribe') {\n   36  			D ( 'Common/Follow' )->set_subscribe ( $dataArr ['FromUserName'], 0 );\n   ..\n   62  		}\n   63  	}\n   64: 	function scan($dataArr, $keywordArr = array(), $config = array()) {\n   65  		$map ['scene_id'] = ltrim ( $dataArr ['EventKey'], 'qrscene_' );\n   66  		$map ['token'] = get_token ();\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/Application/Home/Controller/WeixinController.class.php:\n   55  		 * subscribe : 关注公众号\n   56  		 * unsubscribe : 取消关注公众号\n   57: 		 * scan : 扫描带参数二维码事件\n   58  		 * location : 上报地理位置事件\n   59  		 * click : 自定义菜单事件\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/Public/scene/css/waiwan/angular-mocks.js:\n 1591    this.getResponseHeader = function(name) {\n 1592      // the lookup must be case insensitive,\n 1593:     // that's why we try two quick lookups first and full scan last\n 1594      var header = this.$$respHeaders[name];\n 1595      if (header) return header;\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/Public/scene/kindeditor/kindeditor-all-min.js:\n   77  a)},hide:function(){if(this.length<1)return this;this._originDisplay=this[0].style.display;return this.css(\"display\",\"none\")},outer:function(){if(this.length<1)return\"\";var a=this.doc.createElement(\"div\");a.appendChild(this[0].cloneNode(!0));return J(a.innerHTML)},isSingle:function(){return!!fb[this.name]},isInline:function(){return!!gb[this.name]},isBlock:function(){return!!hb[this.name]},isStyle:function(){return!!Fb[this.name]},isControl:function(){return!!Vb[this.name]},contains:function(a){if(this.length<\n   78  1)return!1;return Ba(this[0],i(a)[0])},parent:function(){if(this.length<1)return null;var a=this[0].parentNode;return a?new R(a):null},children:function(){if(this.length<1)return new R([]);for(var a=[],c=this[0].firstChild;c;)(c.nodeType!=3||m(c.nodeValue)!==\"\")&&a.push(c),c=c.nextSibling;return new R(a)},first:function(){var a=this.children();return a.length>0?a.eq(0):null},last:function(){var a=this.children();return a.length>0?a.eq(a.length-1):null},index:function(){if(this.length<1)return-1;for(var a=\n   79: -1,c=this[0];c;)a++,c=c.previousSibling;return a},prev:function(){if(this.length<1)return null;var a=this[0].previousSibling;return a?new R(a):null},next:function(){if(this.length<1)return null;var a=this[0].nextSibling;return a?new R(a):null},scan:function(a,c){function b(d){for(d=c?d.firstChild:d.lastChild;d;){var i=c?d.nextSibling:d.previousSibling;if(a(d)===!1)return!1;if(b(d)===!1)return!1;d=i}}if(!(this.length<1))return c=c===d?!0:c,b(this[0]),this}});h(\"blur,focus,focusin,focusout,load,resize,scroll,unload,click,dblclick,mousedown,mouseup,mousemove,mouseover,mouseout,mouseenter,mouseleave,change,select,submit,keydown,keypress,keyup,error,contextmenu\".split(\",\"),\n   80  function(a,c){R.prototype[c]=function(a){return a?this.bind(c,a):this.fire(c)}});I=i;i=function(a,c){function b(a){a[0]||(a=[]);return new R(a)}if(!(a===d||a===null)){if(typeof a===\"string\"){c&&(c=i(c)[0]);var e=a.length;a.charAt(0)===\"@\"&&(a=a.substr(1));if(a.length!==e||/<.+>/.test(a)){var e=(c?c.ownerDocument||c:document).createElement(\"div\"),u=[];e.innerHTML='<img id=\"__kindeditor_temp_tag__\" width=\"0\" height=\"0\" style=\"display:none;\" />'+a;for(var k=0,h=e.childNodes.length;k<h;k++){var j=e.childNodes[k];\n   81  j.id!=\"__kindeditor_temp_tag__\"&&u.push(j)}return b(u)}return b(Da(a,c))}if(a&&a.constructor===R)return a;a.toArray&&(a=a.toArray());if(g(a))return b(a);return b(D(arguments))}};h(I,function(a,c){i[a]=c});i.NodeClass=R;b.KindEditor=i;var ra=0,qa=1,na=2,sa=3,Ib=0;A(Z,{init:function(a){this.startContainer=a;this.startOffset=0;this.endContainer=a;this.endOffset=0;this.collapsed=!0;this.doc=a},commonAncestor:function(){function a(a){for(var c=[];a;)c.push(a),a=a.parentNode;return c}for(var c=a(this.startContainer),\n   ..\n   95  this;a&&this.range.selectNodeContents(c.body).collapse(!1);return this},select:function(a){var a=r(a,!0),c=this.sel,b=this.range.cloneRange().shrink(),d=b.startContainer,e=b.startOffset,k=ga(d),g=this.win,h,j=!1;if(a&&d.nodeType==1&&b.collapsed){if(C){c=i(\"<span>&nbsp;</span>\",k);b.insertNode(c[0]);h=k.body.createTextRange();try{h.moveToElementText(c[0])}catch(n){}h.collapse(!1);h.select();c.remove();g.focus();return this}if(ja&&(a=d.childNodes,i(d).isInline()||e>0&&i(a[e-1]).isInline()||a[e]&&i(a[e]).isInline()))b.insertNode(k.createTextNode(\"\\u200b\")),\n   96  j=!0}if(C)try{h=b.get(!0),h.select()}catch(o){}else j&&b.collapse(!1),h=b.get(!0),c.removeAllRanges(),c.addRange(h),k!==document&&(b=i(h.endContainer).pos(),g.scrollTo(b.x,b.y));g.focus();return this},wrap:function(a){var c=this.range,b;b=i(a,this.doc);if(c.collapsed)return c.shrink(),c.insertNode(b[0]).selectNodeContents(b[0]),this;if(b.isBlock()){for(var d=a=b.clone(!0);d.first();)d=d.first();d.append(c.extractContents());c.insertNode(a[0]).selectNode(a[0]);return this}c.enlarge();var e=c.createBookmark(),\n   97: a=c.commonAncestor(),k=!1;i(a).scan(function(a){if(!k&&a==e.start)k=!0;else if(k){if(a==e.end)return!1;var c=i(a),d;a:{for(d=c;d&&d.name!=\"body\";){if(Ja[d.name]||d.name==\"div\"&&d.hasClass(\"ke-script\")){d=!0;break a}d=d.parent()}d=!1}if(!d&&c.type==3&&m(a.nodeValue).length>0){for(var g;(g=c.parent())&&g.isStyle()&&g.children().length==1;)c=g;g=b;g=g.clone(!0);if(c.type==3)Ta(g).append(c.clone(!1)),c.replaceWith(g);else{for(var a=c,h;(h=c.first())&&h.children().length==1;)c=h;h=c.first();for(c=c.doc.createDocumentFragment();h;)c.appendChild(h[0]),\n   98  h=h.next();h=a.clone(!0);d=Ta(h);for(var j=h,n=!1;g;){for(;j;)j.name===g.name&&(Nb(j,g.attr(),g.css()),n=!0),j=j.first();n||d.append(g.clone(!1));n=!1;g=g.first()}g=h;c.firstChild&&Ta(g).append(c);a.replaceWith(g)}}}});c.moveToBookmark(e);return this},split:function(a,c){for(var b=this.range,d=b.doc,e=b.cloneRange().collapse(a),k=e.startContainer,g=e.startOffset,h=k.nodeType==3?k.parentNode:k,j=!1,n;h&&h.parentNode;){n=i(h);if(c){if(!n.isStyle())break;if(!Ra(n,c))break}else if(Ia[n.name])break;j=\n   99  !0;h=h.parentNode}if(j)d=d.createElement(\"span\"),b.cloneRange().collapse(!a).insertNode(d),a?e.setStartBefore(h.firstChild).setEnd(k,g):e.setStart(k,g).setEndAfter(h.lastChild),k=e.extractContents(),g=k.firstChild,j=k.lastChild,a?(e.insertNode(k),b.setStartAfter(j).setEndBefore(d)):(h.appendChild(k),b.setStartBefore(d).setEndBefore(g)),e=d.parentNode,e==b.endContainer&&(h=i(d).prev(),k=i(d).next(),h&&k&&h.type==3&&k.type==3?b.setEnd(h[0],h[0].nodeValue.length):a||b.setEnd(b.endContainer,b.endOffset-\n  100  1)),e.removeChild(d);return this},remove:function(a){var c=this.doc,b=this.range;b.enlarge();if(b.startOffset===0){for(var d=i(b.startContainer),e;(e=d.parent())&&e.isStyle()&&e.children().length==1;)d=e;b.setStart(d[0],0);d=i(b.startContainer);d.isBlock()&&Sa(d,a);(d=d.parent())&&d.isBlock()&&Sa(d,a)}if(b.collapsed){this.split(!0,a);c=b.startContainer;d=b.startOffset;if(d>0&&(e=i(c.childNodes[d-1]))&&oa(e))e.remove(),b.setStart(c,d-1);(d=i(c.childNodes[d]))&&oa(d)&&d.remove();oa(c)&&(b.startBefore(c),\n  101: c.remove());b.collapse(!0);return this}this.split(!0,a);this.split(!1,a);var k=c.createElement(\"span\"),g=c.createElement(\"span\");b.cloneRange().collapse(!1).insertNode(g);b.cloneRange().collapse(!0).insertNode(k);var j=[],n=!1;i(b.commonAncestor()).scan(function(a){if(!n&&a==k)n=!0;else{if(a==g)return!1;n&&j.push(a)}});i(k).remove();i(g).remove();c=b.startContainer;d=b.startOffset;e=b.endContainer;var o=b.endOffset;if(d>0){var m=i(c.childNodes[d-1]);m&&oa(m)&&(m.remove(),b.setStart(c,d-1),c==e&&b.setEnd(e,\n  102  o-1));if((d=i(c.childNodes[d]))&&oa(d))d.remove(),c==e&&b.setEnd(e,o-1)}(c=i(e.childNodes[b.endOffset]))&&oa(c)&&c.remove();c=b.createBookmark(!0);h(j,function(c,b){Sa(i(b),a)});b.moveToBookmark(c);return this},commonNode:function(a){function c(c){for(var b=c;c;){if(Ra(i(c),a))return i(c);c=c.parentNode}for(;b&&(b=b.lastChild);)if(Ra(i(b),a))return i(b);return null}var b=this.range,d=b.endContainer,b=b.endOffset,e=d.nodeType==3||b===0?d:d.childNodes[b-1],k=c(e);if(k)return k;if(e.nodeType==1||d.nodeType==\n  103  3&&b===0)if(d=i(e).prev())return c(d);return null},commonAncestor:function(a){function c(c){for(;c;){if(c.nodeType==1&&c.tagName.toLowerCase()===a)return c;c=c.parentNode}return null}var b=this.range,d=b.startContainer,e=b.startOffset,k=b.endContainer,b=b.endOffset,k=k.nodeType==3||b===0?k:k.childNodes[b-1],d=c(d.nodeType==3||e===0?d:d.childNodes[e-1]),e=c(k);if(d&&e&&d===e)return i(d);return null},state:function(a){var c=this.doc,b=!1;try{b=c.queryCommandState(a)}catch(d){}return b},val:function(a){var c=\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/Public/scene/kindeditor/kindeditor-all.js:\n 1693  		return node ? new KNode(node) : null;\n 1694  	},\n 1695: 	scan : function(fn, order) {\n 1696  		if (this.length < 1) {\n 1697  			return;\n ....\n 2764  		range.enlarge();\n 2765  		var bookmark = range.createBookmark(), ancestor = range.commonAncestor(), isStart = false;\n 2766: 		K(ancestor).scan(function(node) {\n 2767  			if (!isStart && node == bookmark.start) {\n 2768  				isStart = true;\n ....\n 2889  		range.cloneRange().collapse(true).insertNode(startDummy);\n 2890  		var nodeList = [], cmpStart = false;\n 2891: 		K(range.commonAncestor()).scan(function(node) {\n 2892  			if (!cmpStart && node == startDummy) {\n 2893  				cmpStart = true;\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/Public/scene/kindeditor/kindeditor-min.js:\n   76  return Q(a.innerHTML)},isSingle:function(){return!!ib[this.name]},isInline:function(){return!!jb[this.name]},isBlock:function(){return!!kb[this.name]},isStyle:function(){return!!Mb[this.name]},isControl:function(){return!!ec[this.name]},contains:function(a){if(this.length<1)return!1;return sa(this[0],f(a)[0])},parent:function(){if(this.length<1)return null;var a=this[0].parentNode;return a?new E(a):null},children:function(){if(this.length<1)return new E([]);for(var a=[],b=this[0].firstChild;b;)(b.nodeType!=\n   77  3||A(b.nodeValue)!==\"\")&&a.push(b),b=b.nextSibling;return new E(a)},first:function(){var a=this.children();return a.length>0?a.eq(0):null},last:function(){var a=this.children();return a.length>0?a.eq(a.length-1):null},index:function(){if(this.length<1)return-1;for(var a=-1,b=this[0];b;)a++,b=b.previousSibling;return a},prev:function(){if(this.length<1)return null;var a=this[0].previousSibling;return a?new E(a):null},next:function(){if(this.length<1)return null;var a=this[0].nextSibling;return a?new E(a):\n   78: null},scan:function(a,b){function c(d){for(d=b?d.firstChild:d.lastChild;d;){var e=b?d.nextSibling:d.previousSibling;if(a(d)===!1)return!1;if(c(d)===!1)return!1;d=e}}if(!(this.length<1))return b=b===j?!0:b,c(this[0]),this}});m(\"blur,focus,focusin,focusout,load,resize,scroll,unload,click,dblclick,mousedown,mouseup,mousemove,mouseover,mouseout,mouseenter,mouseleave,change,select,submit,keydown,keypress,keyup,error,contextmenu\".split(\",\"),function(a,b){E.prototype[b]=function(a){return a?this.bind(b,\n   79  a):this.fire(b)}});p=f;f=function(a,b){function c(a){a[0]||(a=[]);return new E(a)}if(!(a===j||a===null)){if(typeof a===\"string\"){b&&(b=f(b)[0]);var d=a.length;a.charAt(0)===\"@\"&&(a=a.substr(1));if(a.length!==d||/<.+>/.test(a)){var d=(b?b.ownerDocument||b:document).createElement(\"div\"),e=[];d.innerHTML='<img id=\"__kindeditor_temp_tag__\" width=\"0\" height=\"0\" style=\"display:none;\" />'+a;for(var g=0,h=d.childNodes.length;g<h;g++){var i=d.childNodes[g];i.id!=\"__kindeditor_temp_tag__\"&&e.push(i)}return c(e)}return c(ua(a,\n   80  b))}if(a&&a.constructor===E)return a;if(V(a))return c(a);return c(Fa(arguments))}};m(p,function(a,b){f[a]=b});z.KindEditor=f;var ga=0,fa=1,$=2,ha=3,Pb=0;F(M,{init:function(a){this.startContainer=a;this.startOffset=0;this.endContainer=a;this.endOffset=0;this.collapsed=!0;this.doc=a},commonAncestor:function(){function a(a){for(var b=[];a;)b.push(a),a=a.parentNode;return b}for(var b=a(this.startContainer),c=a(this.endContainer),d=0,e=b.length,g=c.length,f,i;++d;)if(f=b[e-d],i=c[g-d],!f||!i||f!==i)break;\n   ..\n   93  $;f.END_TO_START=ha;F(va,{init:function(a){var b=a.doc;this.doc=b;this.win=R(b);this.sel=Oa(b);this.range=a},selection:function(a){var b=this.doc,c;c=Oa(b);var d;try{d=c.rangeCount>0?c.getRangeAt(0):c.createRange()}catch(e){}c=o&&(!d||!d.item&&d.parentElement().ownerDocument!==b)?null:d;this.sel=Oa(b);if(c)return this.range=Na(c),f(this.range.startContainer).name==\"html\"&&this.range.selectNodeContents(b.body).collapse(!1),this;a&&this.range.selectNodeContents(b.body).collapse(!1);return this},select:function(a){var a=\n   94  l(a,!0),b=this.sel,c=this.range.cloneRange().shrink(),d=c.startContainer,e=c.startOffset,g=Y(d),h=this.win,i,k=!1;if(a&&d.nodeType==1&&c.collapsed){if(o){b=f(\"<span>&nbsp;</span>\",g);c.insertNode(b[0]);i=g.body.createTextRange();try{i.moveToElementText(b[0])}catch(n){}i.collapse(!1);i.select();b.remove();h.focus();return this}if(ba&&(a=d.childNodes,f(d).isInline()||e>0&&f(a[e-1]).isInline()||a[e]&&f(a[e]).isInline()))c.insertNode(g.createTextNode(\"\\u200b\")),k=!0}if(o)try{i=c.get(!0),i.select()}catch(j){}else k&&\n   95: c.collapse(!1),i=c.get(!0),b.removeAllRanges(),b.addRange(i);h.focus();return this},wrap:function(a){var b=this.range,c;c=f(a,this.doc);if(b.collapsed)return b.shrink(),b.insertNode(c[0]).selectNodeContents(c[0]),this;if(c.isBlock()){for(var d=a=c.clone(!0);d.first();)d=d.first();d.append(b.extractContents());b.insertNode(a[0]).selectNode(a[0]);return this}b.enlarge();var e=b.createBookmark(),a=b.commonAncestor(),g=!1;f(a).scan(function(a){if(!g&&a==e.start)g=!0;else if(g){if(a==e.end)return!1;var b=\n   96  f(a);if(!xb(b)&&b.type==3&&A(a.nodeValue).length>0){for(var d;(d=b.parent())&&d.isStyle()&&d.children().length==1;)b=d;d=c;d=d.clone(!0);if(b.type==3)Ra(d).append(b.clone(!1)),b.replaceWith(d);else{for(var a=b,n;(n=b.first())&&n.children().length==1;)b=n;n=b.first();for(b=b.doc.createDocumentFragment();n;)b.appendChild(n[0]),n=n.next();n=a.clone(!0);for(var j=Ra(n),l=n,m=!1;d;){for(;l;)l.name===d.name&&(Xb(l,d.attr(),d.css()),m=!0),l=l.first();m||j.append(d.clone(!1));m=!1;d=d.first()}d=n;b.firstChild&&\n   97  Ra(d).append(b);a.replaceWith(d)}}}});b.moveToBookmark(e);return this},split:function(a,b){for(var c=this.range,d=c.doc,e=c.cloneRange().collapse(a),g=e.startContainer,h=e.startOffset,i=g.nodeType==3?g.parentNode:g,k=!1,n;i&&i.parentNode;){n=f(i);if(b){if(!n.isStyle())break;if(!Pa(n,b))break}else if(Da[n.name])break;k=!0;i=i.parentNode}if(k)d=d.createElement(\"span\"),c.cloneRange().collapse(!a).insertNode(d),a?e.setStartBefore(i.firstChild).setEnd(g,h):e.setStart(g,h).setEndAfter(i.lastChild),g=e.extractContents(),\n   98  h=g.firstChild,k=g.lastChild,a?(e.insertNode(g),c.setStartAfter(k).setEndBefore(d)):(i.appendChild(g),c.setStartBefore(d).setEndBefore(h)),e=d.parentNode,e==c.endContainer&&(i=f(d).prev(),g=f(d).next(),i&&g&&i.type==3&&g.type==3?c.setEnd(i[0],i[0].nodeValue.length):a||c.setEnd(c.endContainer,c.endOffset-1)),e.removeChild(d);return this},remove:function(a){var b=this.doc,c=this.range;c.enlarge();if(c.startOffset===0){for(var d=f(c.startContainer),e;(e=d.parent())&&e.isStyle()&&e.children().length==\n   99  1;)d=e;c.setStart(d[0],0);d=f(c.startContainer);d.isBlock()&&Qa(d,a);(d=d.parent())&&d.isBlock()&&Qa(d,a)}if(c.collapsed){this.split(!0,a);b=c.startContainer;d=c.startOffset;if(d>0&&(e=f(b.childNodes[d-1]))&&aa(e))e.remove(),c.setStart(b,d-1);(d=f(b.childNodes[d]))&&aa(d)&&d.remove();aa(b)&&(c.startBefore(b),b.remove());c.collapse(!0);return this}this.split(!0,a);this.split(!1,a);var g=b.createElement(\"span\"),h=b.createElement(\"span\");c.cloneRange().collapse(!1).insertNode(h);c.cloneRange().collapse(!0).insertNode(g);\n  100: var i=[],k=!1;f(c.commonAncestor()).scan(function(a){if(!k&&a==g)k=!0;else{if(a==h)return!1;k&&i.push(a)}});f(g).remove();f(h).remove();b=c.startContainer;d=c.startOffset;e=c.endContainer;var n=c.endOffset;if(d>0){var l=f(b.childNodes[d-1]);l&&aa(l)&&(l.remove(),c.setStart(b,d-1),b==e&&c.setEnd(e,n-1));if((d=f(b.childNodes[d]))&&aa(d))d.remove(),b==e&&c.setEnd(e,n-1)}(b=f(e.childNodes[c.endOffset]))&&aa(b)&&b.remove();b=c.createBookmark(!0);m(i,function(b,c){Qa(f(c),a)});c.moveToBookmark(b);return this},\n  101  commonNode:function(a){function b(b){for(var c=b;b;){if(Pa(f(b),a))return f(b);b=b.parentNode}for(;c&&(c=c.lastChild);)if(Pa(f(c),a))return f(c);return null}var c=this.range,d=c.endContainer,c=c.endOffset,e=d.nodeType==3||c===0?d:d.childNodes[c-1],g=b(e);if(g)return g;if(e.nodeType==1||d.nodeType==3&&c===0)if(d=f(e).prev())return b(d);return null},commonAncestor:function(a){function b(b){for(;b;){if(b.nodeType==1&&b.tagName.toLowerCase()===a)return b;b=b.parentNode}return null}var c=this.range,d=\n  102  c.startContainer,e=c.startOffset,g=c.endContainer,c=c.endOffset,g=g.nodeType==3||c===0?g:g.childNodes[c-1],d=b(d.nodeType==3||e===0?d:d.childNodes[e-1]),e=b(g);if(d&&e&&d===e)return f(d);return null},state:function(a){var b=this.doc,c=!1;try{c=b.queryCommandState(a)}catch(d){}return c},val:function(a){var b=this.doc,a=a.toLowerCase(),c=\"\";if(a===\"fontfamily\"||a===\"fontname\")return c=tb(b,\"fontname\"),c=c.replace(/['\"]/g,\"\"),c.toLowerCase();if(a===\"formatblock\"){c=tb(b,a);if(c===\"\"&&(a=this.commonNode({\"h1,h2,h3,h4,h5,h6,p,div,pre,address\":\"*\"})))c=\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/Public/scene/kindeditor/kindeditor.js:\n 1695  		return node ? new KNode(node) : null;\n 1696  	},\n 1697: 	scan : function(fn, order) {\n 1698  		if (this.length < 1) {\n 1699  			return;\n ....\n 2766  		range.enlarge();\n 2767  		var bookmark = range.createBookmark(), ancestor = range.commonAncestor(), isStart = false;\n 2768: 		K(ancestor).scan(function(node) {\n 2769  			if (!isStart && node == bookmark.start) {\n 2770  				isStart = true;\n ....\n 2891  		range.cloneRange().collapse(true).insertNode(startDummy);\n 2892  		var nodeList = [], cmpStart = false;\n 2893: 		K(range.commonAncestor()).scan(function(node) {\n 2894  			if (!cmpStart && node == startDummy) {\n 2895  				cmpStart = true;\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/Public/static/highcharts-4.0.1/exporting-server/java/highcharts-export/highcharts-export-convert/src/main/resources/spring-convert.xml:\n   16  	<task:annotation-driven/>\n   17  	<context:annotation-config/>\n   18: 	<context:component-scan base-package=\"com.highcharts.export.converter\" />\n   19  \n   20  	<context:property-placeholder location=\"classpath*:app-convert.properties\" order=\"0\"/>\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/Public/static/highcharts-4.0.1/exporting-server/java/highcharts-export/highcharts-export-web/src/main/webapp/resources/lib/codemirror/codemirror.js:\n 1830  \n 1831        var stack = [line.text.charAt(pos)], re = /[(){}[\\]]/;\n 1832:       function scan(line, from, to) {\n 1833          if (!line.text) return;\n 1834          var st = line.styles, pos = forward ? 0 : line.text.length - 1, cur;\n ....\n 1848        for (var i = head.line, e = forward ? Math.min(i + 100, doc.size) : Math.max(-1, i - 100); i != e; i+=d) {\n 1849          var line = getLine(i), first = i == head.line;\n 1850:         var found = scan(line, first && forward ? pos + 1 : 0, first && !forward ? pos : line.text.length);\n 1851          if (found) break;\n 1852        }\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/Public/static/highcharts-4.0.1/exporting-server/java/highcharts-export/highcharts-export-web/src/main/webapp/WEB-INF/spring/export-servlet.xml:\n   14  	<!-- Activate annotation configured components -->\n   15  	<context:annotation-config />\n   16: 	<context:component-scan base-package=\"com.highcharts.export.controller\" />\n   17  \n   18  	<!-- Handles HTTP GET requests for /resources/** by efficiently serving\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/Public/static/kindeditor/kindeditor-min.js:\n   77  a)},hide:function(){if(this.length<1)return this;this._originDisplay=this[0].style.display;return this.css(\"display\",\"none\")},outer:function(){if(this.length<1)return\"\";var a=this.doc.createElement(\"div\");a.appendChild(this[0].cloneNode(!0));return S(a.innerHTML)},isSingle:function(){return!!ib[this.name]},isInline:function(){return!!jb[this.name]},isBlock:function(){return!!kb[this.name]},isStyle:function(){return!!Lb[this.name]},isControl:function(){return!!dc[this.name]},contains:function(a){if(this.length<\n   78  1)return!1;return xa(this[0],f(a)[0])},parent:function(){if(this.length<1)return null;var a=this[0].parentNode;return a?new D(a):null},children:function(){if(this.length<1)return new D([]);for(var a=[],b=this[0].firstChild;b;)(b.nodeType!=3||B(b.nodeValue)!==\"\")&&a.push(b),b=b.nextSibling;return new D(a)},first:function(){var a=this.children();return a.length>0?a.eq(0):null},last:function(){var a=this.children();return a.length>0?a.eq(a.length-1):null},index:function(){if(this.length<1)return-1;for(var a=\n   79: -1,b=this[0];b;)a++,b=b.previousSibling;return a},prev:function(){if(this.length<1)return null;var a=this[0].previousSibling;return a?new D(a):null},next:function(){if(this.length<1)return null;var a=this[0].nextSibling;return a?new D(a):null},scan:function(a,b){function c(d){for(d=b?d.firstChild:d.lastChild;d;){var e=b?d.nextSibling:d.previousSibling;if(a(d)===!1)return!1;if(c(d)===!1)return!1;d=e}}if(!(this.length<1))return b=b===o?!0:b,c(this[0]),this}});m(\"blur,focus,focusin,focusout,load,resize,scroll,unload,click,dblclick,mousedown,mouseup,mousemove,mouseover,mouseout,mouseenter,mouseleave,change,select,submit,keydown,keypress,keyup,error,contextmenu\".split(\",\"),\n   80  function(a,b){D.prototype[b]=function(a){return a?this.bind(b,a):this.fire(b)}});q=f;f=function(a,b){function c(a){a[0]||(a=[]);return new D(a)}if(!(a===o||a===null)){if(typeof a===\"string\"){b&&(b=f(b)[0]);var d=a.length;a.charAt(0)===\"@\"&&(a=a.substr(1));if(a.length!==d||/<.+>/.test(a)){var d=(b?b.ownerDocument||b:document).createElement(\"div\"),e=[];d.innerHTML='<img id=\"__kindeditor_temp_tag__\" width=\"0\" height=\"0\" style=\"display:none;\" />'+a;for(var g=0,h=d.childNodes.length;g<h;g++){var i=d.childNodes[g];\n   81  i.id!=\"__kindeditor_temp_tag__\"&&e.push(i)}return c(e)}return c(za(a,b))}if(a&&a.constructor===D)return a;a.toArray&&(a=a.toArray());if(Y(a))return c(a);return c(Fa(arguments))}};m(q,function(a,b){f[a]=b});f.NodeClass=D;A.KindEditor=f;var ka=0,ja=1,ca=2,la=3,Ob=0;E(L,{init:function(a){this.startContainer=a;this.startOffset=0;this.endContainer=a;this.endOffset=0;this.collapsed=!0;this.doc=a},commonAncestor:function(){function a(a){for(var b=[];a;)b.push(a),a=a.parentNode;return b}for(var b=a(this.startContainer),\n   ..\n   95  this;a&&this.range.selectNodeContents(b.body).collapse(!1);return this},select:function(a){var a=j(a,!0),b=this.sel,c=this.range.cloneRange().shrink(),d=c.startContainer,e=c.startOffset,g=T(d),h=this.win,i,k=!1;if(a&&d.nodeType==1&&c.collapsed){if(l){b=f(\"<span>&nbsp;</span>\",g);c.insertNode(b[0]);i=g.body.createTextRange();try{i.moveToElementText(b[0])}catch(n){}i.collapse(!1);i.select();b.remove();h.focus();return this}if(W&&(a=d.childNodes,f(d).isInline()||e>0&&f(a[e-1]).isInline()||a[e]&&f(a[e]).isInline()))c.insertNode(g.createTextNode(\"\\u200b\")),\n   96  k=!0}if(l)try{i=c.get(!0),i.select()}catch(r){}else k&&c.collapse(!1),i=c.get(!0),b.removeAllRanges(),b.addRange(i),g!==document&&(c=f(i.endContainer).pos(),h.scrollTo(c.x,c.y));h.focus();return this},wrap:function(a){var b=this.range,c;c=f(a,this.doc);if(b.collapsed)return b.shrink(),b.insertNode(c[0]).selectNodeContents(c[0]),this;if(c.isBlock()){for(var d=a=c.clone(!0);d.first();)d=d.first();d.append(b.extractContents());b.insertNode(a[0]).selectNode(a[0]);return this}b.enlarge();var e=b.createBookmark(),\n   97: a=b.commonAncestor(),g=!1;f(a).scan(function(a){if(!g&&a==e.start)g=!0;else if(g){if(a==e.end)return!1;var b=f(a),d;a:{for(d=b;d&&d.name!=\"body\";){if(Ha[d.name]||d.name==\"div\"&&d.hasClass(\"ke-script\")){d=!0;break a}d=d.parent()}d=!1}if(!d&&b.type==3&&B(a.nodeValue).length>0){for(var n;(n=b.parent())&&n.isStyle()&&n.children().length==1;)b=n;n=c;n=n.clone(!0);if(b.type==3)Ra(n).append(b.clone(!1)),b.replaceWith(n);else{for(var a=b,j;(j=b.first())&&j.children().length==1;)b=j;j=b.first();for(b=b.doc.createDocumentFragment();j;)b.appendChild(j[0]),\n   98  j=j.next();j=a.clone(!0);d=Ra(j);for(var p=j,l=!1;n;){for(;p;)p.name===n.name&&(Wb(p,n.attr(),n.css()),l=!0),p=p.first();l||d.append(n.clone(!1));l=!1;n=n.first()}n=j;b.firstChild&&Ra(n).append(b);a.replaceWith(n)}}}});b.moveToBookmark(e);return this},split:function(a,b){for(var c=this.range,d=c.doc,e=c.cloneRange().collapse(a),g=e.startContainer,h=e.startOffset,i=g.nodeType==3?g.parentNode:g,k=!1,n;i&&i.parentNode;){n=f(i);if(b){if(!n.isStyle())break;if(!Pa(n,b))break}else if(Ea[n.name])break;k=\n   99  !0;i=i.parentNode}if(k)d=d.createElement(\"span\"),c.cloneRange().collapse(!a).insertNode(d),a?e.setStartBefore(i.firstChild).setEnd(g,h):e.setStart(g,h).setEndAfter(i.lastChild),g=e.extractContents(),h=g.firstChild,k=g.lastChild,a?(e.insertNode(g),c.setStartAfter(k).setEndBefore(d)):(i.appendChild(g),c.setStartBefore(d).setEndBefore(h)),e=d.parentNode,e==c.endContainer&&(i=f(d).prev(),g=f(d).next(),i&&g&&i.type==3&&g.type==3?c.setEnd(i[0],i[0].nodeValue.length):a||c.setEnd(c.endContainer,c.endOffset-\n  100  1)),e.removeChild(d);return this},remove:function(a){var b=this.doc,c=this.range;c.enlarge();if(c.startOffset===0){for(var d=f(c.startContainer),e;(e=d.parent())&&e.isStyle()&&e.children().length==1;)d=e;c.setStart(d[0],0);d=f(c.startContainer);d.isBlock()&&Qa(d,a);(d=d.parent())&&d.isBlock()&&Qa(d,a)}if(c.collapsed){this.split(!0,a);b=c.startContainer;d=c.startOffset;if(d>0&&(e=f(b.childNodes[d-1]))&&da(e))e.remove(),c.setStart(b,d-1);(d=f(b.childNodes[d]))&&da(d)&&d.remove();da(b)&&(c.startBefore(b),\n  101: b.remove());c.collapse(!0);return this}this.split(!0,a);this.split(!1,a);var g=b.createElement(\"span\"),h=b.createElement(\"span\");c.cloneRange().collapse(!1).insertNode(h);c.cloneRange().collapse(!0).insertNode(g);var i=[],k=!1;f(c.commonAncestor()).scan(function(a){if(!k&&a==g)k=!0;else{if(a==h)return!1;k&&i.push(a)}});f(g).remove();f(h).remove();b=c.startContainer;d=c.startOffset;e=c.endContainer;var n=c.endOffset;if(d>0){var j=f(b.childNodes[d-1]);j&&da(j)&&(j.remove(),c.setStart(b,d-1),b==e&&c.setEnd(e,\n  102  n-1));if((d=f(b.childNodes[d]))&&da(d))d.remove(),b==e&&c.setEnd(e,n-1)}(b=f(e.childNodes[c.endOffset]))&&da(b)&&b.remove();b=c.createBookmark(!0);m(i,function(b,c){Qa(f(c),a)});c.moveToBookmark(b);return this},commonNode:function(a){function b(b){for(var c=b;b;){if(Pa(f(b),a))return f(b);b=b.parentNode}for(;c&&(c=c.lastChild);)if(Pa(f(c),a))return f(c);return null}var c=this.range,d=c.endContainer,c=c.endOffset,e=d.nodeType==3||c===0?d:d.childNodes[c-1],g=b(e);if(g)return g;if(e.nodeType==1||d.nodeType==\n  103  3&&c===0)if(d=f(e).prev())return b(d);return null},commonAncestor:function(a){function b(b){for(;b;){if(b.nodeType==1&&b.tagName.toLowerCase()===a)return b;b=b.parentNode}return null}var c=this.range,d=c.startContainer,e=c.startOffset,g=c.endContainer,c=c.endOffset,g=g.nodeType==3||c===0?g:g.childNodes[c-1],d=b(d.nodeType==3||e===0?d:d.childNodes[e-1]),e=b(g);if(d&&e&&d===e)return f(d);return null},state:function(a){var b=this.doc,c=!1;try{c=b.queryCommandState(a)}catch(d){}return c},val:function(a){var b=\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/Public/static/ueditor/third-party/codemirror/codemirror.js:\n 1543  \n 1544              var stack = [line.text.charAt(pos)], re = /[(){}[\\]]/;\n 1545:             function scan(line, from, to) {\n 1546                  if (!line.text) return;\n 1547                  var st = line.styles, pos = forward ? 0 : line.text.length - 1, cur;\n ....\n 1561              for (var i = head.line, e = forward ? Math.min(i + 100, doc.size) : Math.max(-1, i - 100); i != e; i+=d) {\n 1562                  var line = getLine(i), first = i == head.line;\n 1563:                 var found = scan(line, first && forward ? pos + 1 : 0, first && !forward ? pos : line.text.length);\n 1564                  if (found) break;\n 1565              }\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/ThinkPHP/Library/OT/PclZip.class.php:\n 4703      @rewind($this->zip_fd);\n 4704  \n 4705:     // ----- Scan all the files\n 4706      // ----- Start at beginning of Central Dir\n 4707      $v_pos_entry = $v_central_dir['offset'];\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/ThinkPHP/Library/Vendor/getID3/changelog.txt:\n 1229     Â¤ New Lyrics3 values: ['lyrics3']['raw']['offset_start'] and\n 1230       ['lyrics3']['raw']['offset_end']\n 1231:    Â¤ New optional parameter on getAPEtagFilepointer() to scan from a\n 1232       defined offset rather than end-of-file to allow scanning of APE\n 1233       tags before Lyrics3 tags\n ....\n 1955     Â¤ Now returns fopen() errors in ['error'], for example if a remote\n 1956       file is not accessible.\n 1957:    Â¤ Changed default number of MP3 audio frames to scan to determine\n 1958       if a valid stream has been found from 5 to 10, now also defined\n 1959       as a constant at the top of getid3.mp3.php  This will result in\n ....\n 1965       will force an MP3 audio frame sequence to be force-scanned in\n 1966       CBR mode. You should never need to call this directly, it's only\n 1967:      used internally to scan for MP3 files that have an illegal VBR\n 1968       header with CBR data. (thanks fletchÃ˜pobox*com)\n 1969     * Bugfix: ASF_Marker_Object in getid3.asf.php was always returning\n ....\n 1978     getid3.asf.php now notes the error and continues parsing rather\n 1979       than failing when it encounters an error parsing a chunk\n 1980:    Now actually scan 1000 frames for AAC ADTS as reported in the\n 1981       v1.5.4 changelog, rather than 100. (thanks ahÃ˜artemis*dk)\n 1982     Improved scanning speed in getAACADTSheaderFilepointer() by ~30%\n ....\n 2263       detect based on the first few bytes of the file doesn't find a\n 2264       known format (for example if the header is corrupt), a more\n 2265:      thorough scan is done based on the file extension\n 2266     Added 'Edit ID3' link from getid3.check.php to getid3.write.php for\n 2267       MP3 files  (thanks maxÃ˜gutalin*com for the idea)\n ....\n 2295       for images (wouldn't work with path/file names containing special\n 2296       characters (#, &, \", +)  (thanks Christian Fritz)\n 2297:    getid3.check.php no longer attempts to scan all MIDI tracks in\n 2298       directory-browse mode, since this can take a long time. Detailed\n 2299       single-file view is still fully scanned (new third parameter for\n ....\n 2403       the immediate beginning of the file (MP3 used to be the default\n 2404       format), so a corrupt file may not show up as MP3 format in the\n 2405:      browse screen, but in detail it will scan in-depth\n 2406     getid3.check.php now has columns to show the presence of ID3v1,\n 2407       ID3v2 and Lyrics3 content\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/ThinkPHP/Library/Vendor/getID3/demos/demo.mp3header.php:\n 1581  /////////////////////////////////////////////////////////////////\n 1582  \n 1583: // number of frames to scan to determine if MPEG-audio sequence is valid\n 1584  // Lower this number to 5-20 for faster scanning\n 1585  // Increase this number to 50+ for most accurate detection of valid VBR/CBR\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/ThinkPHP/Library/Vendor/getID3/demos/demo.mysql.php:\n  202  \n  203  \n  204: if (!empty($_REQUEST['scan'])) {\n  205  	if (mysql_table_exists(GETID3_DB_TABLE)) {\n  206  		$SQLquery  = 'DROP TABLE `'.mysql_real_escape_string(GETID3_DB_TABLE).'`';\n  ...\n  339  $IgnoreNoTagFormats = array('', 'png', 'jpg', 'gif', 'bmp', 'swf', 'pdf', 'zip', 'rar', 'mid', 'mod', 'xm', 'it', 's3m');\n  340  \n  341: if (!empty($_REQUEST['scan']) || !empty($_REQUEST['newscan']) || !empty($_REQUEST['rescanerrors'])) {\n  342  \n  343  	$SQLquery  = 'DELETE from `'.mysql_real_escape_string(GETID3_DB_TABLE).'`';\n  ...\n  351  		echo '<a href=\"'.htmlentities($_SERVER['PHP_SELF']).'\">abort</a><hr>';\n  352  \n  353: 		echo 'Re-scanning all media files already in database that had errors and/or warnings in last scan<hr>';\n  354  \n  355  		$SQLquery  = 'SELECT `filename`';\n  ...\n  372  		}\n  373  \n  374: 	} elseif (!empty($_REQUEST['scan']) || !empty($_REQUEST['newscan'])) {\n  375  \n  376  		echo '<a href=\"'.htmlentities($_SERVER['PHP_SELF']).'\">abort</a><hr>';\n  377  \n  378: 		echo 'Scanning all media files in <b>'.str_replace('\\\\', '/', realpath(!empty($_REQUEST['scan']) ? $_REQUEST['scan'] : $_REQUEST['newscan'])).'</b> (and subdirectories)<hr>';\n  379  \n  380  		$SQLquery  = 'SELECT COUNT(*) AS `num`, `filename`';\n  ...\n  409  		}\n  410  \n  411: 		$DirectoriesToScan  = array(!empty($_REQUEST['scan']) ? $_REQUEST['scan'] : $_REQUEST['newscan']);\n  412  		$DirectoriesScanned = array();\n  413  		while (count($DirectoriesToScan) > 0) {\n  ...\n  429  										$FilesInDir[] = $RealPathName;\n  430  									}\n  431: 								} elseif (!empty($_REQUEST['scan'])) {\n  432  									$FilesInDir[] = $RealPathName;\n  433  								}\n  ...\n  443  			}\n  444  		}\n  445: 		echo '<i>List of files to scan complete (added '.number_format(count($FilesInDir)).' files to scan)</i><hr>';\n  446  		flush();\n  447  	}\n  ...\n  548  				$SQLquery .= 'WHERE (`filename` = \"'. mysql_real_escape_string(isset($ThisFileInfo['filenamepath']) ? $ThisFileInfo['filenamepath'] : '').'\")';\n  549  \n  550: 			} elseif (!empty($_REQUEST['scan']) || !empty($_REQUEST['newscan'])) {\n  551  \n  552  				//$SQLquery  = 'INSERT INTO `'.mysql_real_escape_string(GETID3_DB_TABLE).'` (`filename`, `last_modified`, `md5_file`, `md5_data`, `md5_data_source`, `filesize`, `fileformat`, `audio_dataformat`, `video_dataformat`, `audio_bitrate`, `video_bitrate`, `playtime_seconds`, `artist`, `title`, `remix`, `album`, `genre`, `comment`, `track`, `comments_all`, `comments_id3v2`, `comments_ape`, `comments_lyrics3`, `comments_id3v1`, `warning`, `error`, `encoder_options`, `vbr_method`, `track_volume`) VALUES (';\n  ...\n  698  	}\n  699  \n  700: 	echo '<hr><b>'.number_format($totalremoved).' of '.number_format($totalchecked).' files in database no longer exist, or have been altered since last scan. Removed from database.</b><hr>';\n  701  \n  702  } elseif (!empty($_REQUEST['encodedbydistribution'])) {\n  ...\n 2054  	$SQLquery .= ' ORDER BY `filename` ASC';\n 2055  	$result = mysql_query_safe($SQLquery);\n 2056: 	echo 'Copy and paste the following into a DOS batch file. You may have to run this script more than once to catch all the changes (remember to scan for deleted/changed files and rescan directory between scans)<hr>';\n 2057  	echo '<PRE>';\n 2058  	$lastdir = '';\n ....\n 2139  echo '<hr><form action=\"'.htmlentities($_SERVER['PHP_SELF'], ENT_QUOTES).'\" method=\"get\">';\n 2140  echo '<b>Warning:</b> Scanning a new directory will erase all previous entries in the database!<br>';\n 2141: echo 'Directory: <input type=\"text\" name=\"scan\" size=\"50\" value=\"'.htmlentities(!empty($_REQUEST['scan']) ? $_REQUEST['scan'] : '', ENT_QUOTES).'\"> ';\n 2142  echo '<input type=\"submit\" value=\"Go\" onClick=\"return confirm(\\'Are you sure you want to erase all entries in the database and start scanning again?\\');\">';\n 2143  echo '</form>';\n ....\n 2157  echo '<li><a href=\"'.htmlentities($_SERVER['PHP_SELF'].'?tagtypes=1').'\">Tag Type Distribution</a></li>';\n 2158  echo '<li><a href=\"'.htmlentities($_SERVER['PHP_SELF'].'?genredistribution='.urlencode('%')).'\">Genre Distribution</a></li>';\n 2159: //echo '<li><a href=\"'.htmlentities($_SERVER['PHP_SELF'].'?missingtrackvolume=1').'\">Scan for missing track volume information (update database from pre-v1.7.0b5)</a></li>';\n 2160  echo '<li><a href=\"'.htmlentities($_SERVER['PHP_SELF'].'?encoderoptionsdistribution=1').'\">Encoder Options Distribution</a></li>';\n 2161  echo '<li><a href=\"'.htmlentities($_SERVER['PHP_SELF'].'?encodedbydistribution='.urlencode('%')).'\">Encoded By (ID3v2) Distribution</a></li>';\n ....\n 2172  echo '<li><a href=\"'.htmlentities($_SERVER['PHP_SELF'].'?fixid3v1padding=1').'\">Fix ID3v1 invalid padding</a></li>';\n 2173  echo '<li><a href=\"'.htmlentities($_SERVER['PHP_SELF'].'?errorswarnings=1').'\">Files with Errors and/or Warnings</a></li>';\n 2174: echo '<li><a href=\"'.htmlentities($_SERVER['PHP_SELF'].'?rescanerrors=1').'\">Re-scan only files with Errors and/or Warnings</a></li>';\n 2175  echo '</ul>';\n 2176  \n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/ThinkPHP/Library/Vendor/getID3/demos/demo.simple.php:\n   28  $getID3 = new getID3;\n   29  \n   30: $DirectoryToScan = '/change/to/directory/you/want/to/scan'; // change to whatever directory you want to scan\n   31  $dir = opendir($DirectoryToScan);\n   32  echo '<table border=\"1\" cellspacing=\"0\" cellpadding=\"3\">';\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/ThinkPHP/Library/Vendor/getID3/demos/getid3.demo.dirscan.php:\n   24  * or\n   25  *\n   26: * php <path to getid3 files>/getid3.dirscan.php <dir to scan> <file ext in csv list>\n   27  *\n   28  * Supported Cache Types    (this extension)\n   ..\n  136  				return null;\n  137  				break;\n  138: 			default: // scan 4 directories deep\n  139  				if (!is_dir($root)) {\n  140      				return null;\n  ...\n  236  			$End = self::getTime();\n  237  			$t = number_format(($End - $Start) / 60, 2);\n  238: 			echo '* Time taken to scan '.$dir.' '.$t.' min '.\"\\n\";\n  239  			echo '**************************************'.\"\\n\";\n  240  		} else {\n  ...\n  253  		}\n  254  	}\n  255: 	echo ' * Starting to scan directory: '.$dir.\"\\n\";\n  256  	echo ' * Using default media types: '.implode(',', $media).\"\\n\";\n  257  	dirscan::scan_files($dir, $media, $cache, $database);\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/ThinkPHP/Library/Vendor/getID3/getid3/module.archive.zip.php:\n  119  \n  120  		// central directory couldn't be found and/or parsed\n  121: 		// scan through actual file data entries, recover as much as possible from probable trucated file\n  122  		if ($info['zip']['compressed_size'] > ($info['filesize'] - 46 - 22)) {\n  123  			$info['error'][] = 'Warning: Truncated file! - Total compressed file sizes ('.$info['zip']['compressed_size'].' bytes) is greater than filesize minus Central Directory and End Of Central Directory structures ('.($info['filesize'] - 46 - 22).' bytes)';\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/ThinkPHP/Library/Vendor/getID3/getid3/module.audio-video.flv.php:\n   78  	const magic = 'FLV';\n   79  \n   80: 	public $max_frames = 100000; // break out of the loop if too many frames have been scanned; only scan this many if meta frame does not contain useful duration\n   81  \n   82  	public function Analyze() {\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/ThinkPHP/Library/Vendor/getID3/getid3/module.audio.bonk.php:\n   34  		} else {\n   35  \n   36: 			// scan-from-end method, for v0.6 and higher\n   37  			$this->fseek($thisfile_bonk['dataend'] - 8);\n   38  			$PossibleBonkTag = $this->fread(8);\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/ThinkPHP/Library/Vendor/getID3/getid3/module.audio.mp3.php:\n   16  \n   17  \n   18: // number of frames to scan to determine if MPEG-audio sequence is valid\n   19  // Lower this number to 5-20 for faster scanning\n   20  // Increase this number to 50+ for most accurate detection of valid VBR/CBR\n   ..\n   26  {\n   27  \n   28: 	public $allow_bruteforce = false; // forces getID3() to scan the file byte-by-byte and log all the valid audio frame headers - extremely slow, unrecommended, but may provide data from otherwise-unusuable files\n   29  \n   30  	public function Analyze() {\n   ..\n 1292  							if ($max_frames_scan && (++$frames_scanned >= $max_frames_scan)) {\n 1293  								$pct_data_scanned = ($this->ftell() - $info['avdataoffset']) / ($info['avdataend'] - $info['avdataoffset']);\n 1294: 								$info['warning'][] = 'too many MPEG audio frames to scan, only scanned first '.$max_frames_scan.' frames ('.number_format($pct_data_scanned * 100, 1).'% of file) and extrapolated distribution, playtime and bitrate may be incorrect.';\n 1295  								foreach ($Distribution as $key1 => $value1) {\n 1296  									foreach ($value1 as $key2 => $value2) {\n ....\n 1539  									$this_pct_scanned = ($this->ftell() - $scan_start_offset[$current_segment]) / ($info['avdataend'] - $info['avdataoffset']);\n 1540  									if (($current_segment == 0) && (($this_pct_scanned * $max_scan_segments) >= 1)) {\n 1541: 										// file likely contains < $max_frames_scan, just scan as one segment\n 1542  										$max_scan_segments = 1;\n 1543  										$frames_scan_per_segment = $max_frames_scan;\n ....\n 1550  						}\n 1551  						if ($pct_data_scanned > 0) {\n 1552: 							$info['warning'][] = 'too many MPEG audio frames to scan, only scanned '.$frames_scanned.' frames in '.$max_scan_segments.' segments ('.number_format($pct_data_scanned * 100, 1).'% of file) and extrapolated distribution, playtime and bitrate may be incorrect.';\n 1553  							foreach ($info['mpeg']['audio'] as $key1 => $value1) {\n 1554  								if (!preg_match('#_distribution$#i', $key1)) {\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/ThinkPHP/Library/Vendor/getID3/getid3/module.tag.xmp.php:\n  157  			}\n  158  \n  159: 			// If this is a SOS (Start Of Scan) segment, then there is no more header data - the compressed image data follows\n  160  			if ($data{1} == \"\\xDA\")\n  161  			{\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/ThinkPHP/Library/Vendor/getID3/README.md:\n  176  <?php\n  177  \n  178: // Copy remote file locally to scan with getID3()\n  179  $remotefilename = 'http://www.example.com/filename.mp3';\n  180  if ($fp_remote = fopen($remotefilename, 'rb')) {\n  ...\n  298  \n  299  * Better support for MP4 container format\n  300: * Scan for appended ID3v2 tag at end of file per ID3v2.4 specs (Section 5.0)\n  301  * Support for JPEG-2000 (http://www.morgan-multimedia.com/jpeg2000_overview.htm)\n  302  * Support for MOD (mod/stm/s3m/it/xm/mtm/ult/669)\n  ...\n  305  * Ability to create Xing/LAME VBR header for VBR MP3s that are missing VBR header\n  306  * Ability to \"clean\" ID3v2 padding (replace invalid padding with valid padding)\n  307: * Warn if MP3s change version mid-stream (in full-scan mode)\n  308: * check for corrupt/broken mid-file MP3 streams in histogram scan\n  309  * Support for lossless-compression formats\n  310    (http://www.firstpr.com.au/audiocomp/lossless/#Links)\n  ...\n  334      (thanks n8n8Øyahoo*com)\n  335  * Support for a2b\n  336: * Optional scan-through-frames for AVI verification\n  337    (thanks rockcohenØmassive-interactive*nl)\n  338  * Support for TTF (thanks infoØbutterflyx*com)\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/ThinkPHP/Library/Vendor/getID3/readme.txt:\n  175  like this:\n  176  \n  177: // Copy remote file locally to scan with getID3()\n  178  $remotefilename = 'http://www.example.com/filename.mp3';\n  179  if ($fp_remote = fopen($remotefilename, 'rb')) {\n  ...\n  301  \n  302  * Better support for MP4 container format\n  303: * Scan for appended ID3v2 tag at end of file per ID3v2.4 specs (Section 5.0)\n  304  * Support for JPEG-2000 (http://www.morgan-multimedia.com/jpeg2000_overview.htm)\n  305  * Support for MOD (mod/stm/s3m/it/xm/mtm/ult/669)\n  ...\n  308  * Ability to create Xing/LAME VBR header for VBR MP3s that are missing VBR header\n  309  * Ability to \"clean\" ID3v2 padding (replace invalid padding with valid padding)\n  310: * Warn if MP3s change version mid-stream (in full-scan mode)\n  311: * check for corrupt/broken mid-file MP3 streams in histogram scan\n  312  * Support for lossless-compression formats\n  313    (http://www.firstpr.com.au/audiocomp/lossless/#Links)\n  ...\n  337      (thanks n8n8Øyahoo*com)\n  338  * Support for a2b\n  339: * Optional scan-through-frames for AVI verification\n  340    (thanks rockcohenØmassive-interactive*nl)\n  341  * Support for TTF (thanks infoØbutterflyx*com)\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/ThinkPHP/Library/Vendor/pclzip.php:\n 4703      @rewind($this->zip_fd);\n 4704  \n 4705:     // ----- Scan all the files\n 4706      // ----- Start at beginning of Central Dir\n 4707      $v_pos_entry = $v_central_dir['offset'];\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/ThinkPHP/Library/Vendor/pclzip/pclzip.lib.php:\n 4703      @rewind($this->zip_fd);\n 4704  \n 4705:     // ----- Scan all the files\n 4706      // ----- Start at beginning of Central Dir\n 4707      $v_pos_entry = $v_central_dir['offset'];\n\n/Applications/XAMPP/xamppfiles/htdocs/qjty/ThinkPHP/Library/Vendor/PHPExcel/Shared/PCLZip/pclzip.lib.php:\n 4703      @rewind($this->zip_fd);\n 4704  \n 4705:     // ----- Scan all the files\n 4706      // ----- Start at beginning of Central Dir\n 4707      $v_pos_entry = $v_central_dir['offset'];\n\n89 matches across 33 files\n",
+			"settings":
+			{
+				"buffer_size": 46223,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "Addons/Orienteering/Model/WeixinAddonModel.class.php",
+			"settings":
+			{
+				"buffer_size": 1248,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Application/Common/Common/function.php",
+			"settings":
+			{
+				"buffer_size": 98289,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"install",
+			"dfasdfa"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Ask",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Ask/Controller",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Ask/Model",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Game/Model",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering/Controller",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering/Model",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering/View",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/QrAdmin",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/QrAdmin/Model",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Servicer/Model",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Test",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Test/Model",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Weiba",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Weiba/Controller",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Weiba/Model",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/WeiSite",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/WeiSite/Controller",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/WeiSite/Model",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Application",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Application/Home",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Application/Home/Model"
+	],
+	"file_history":
+	[
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/AutoReply/Model/WeixinAddonModel.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Wecome/keyword.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering/Controller/TaskController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Application/Home/Controller/WeixinLogController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Application/Home/View/default/WeixinMessage/lists.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Application/Home/View/default/WeixinLog/lists.html2",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Runtime/install.sql",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Runtime/uninstall.sql",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Application/Common/Controller/Addon.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/QrAdmin/QrAdminAddon.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/QrAdmin/Controller/QrAdminController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/QrAdmin/Model/WeixinAddonModel.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering/Model/WeixinAddonModel.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Public/scene/js/angular.min.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering/OrienteeringAddon.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Application/Admin/Controller/ModelController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering/install.sql",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering/uninstall.sql",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Application/Home/Model/QrCodeModel.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/ThinkPHP/Library/Think/Controller.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Ask/View/default/Ask/add.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Application/Home/View/default/Message/add.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering/View/default/Project/score.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering/Controller/ProjectController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering/Controller/OrienteeringController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering/Controller/TaskActionController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Ask/View/default/Public/css.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering/View/default/Orienteering/score.html.dump",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering/View/default/Orienteering/score.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Weiba/View/default/Public/appframework.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Application/Common/Common/function.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering/Controller/LookupTypeController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering/Controller/TeamController.class.php",
+		"/Users/lhf/Documents/Ｍac TOOL/weiphp笔记",
+		"/Users/lhf/Documents/Hello.jsp",
+		"/Applications/XAMPP/xamppfiles/htdocs/qjty/Addons/Orienteering/Controller/LookupValueController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/Controller/IndexController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Bzjl/Controller/IndexController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/Model/AddonsModel.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/临时",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Bzjl/View/default/Index/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Bzjl/View/default/Index/item.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/View/default/Publics/lists.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Bzjl/Model/IndexModel.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/Controller/PublicController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Bzjl/View/default/Index/test.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/View/default/Index2/download.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Bzjl/View/default/Index/_head.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/Controller/AddonsController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Bzjl/Conf/config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Bzjl/View/default/Index/_footer.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/Logic/DownloadLogic.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/ThinkPHP/Library/Think/Controller.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Vote/Model/VoteModel.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/Conf/config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Bzdr/Controller/IndexController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Bzdr/Conf/config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/Controller/WeixinController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Vote/Model/WeixinAddonModel.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/Controller/HomeController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Bzdr/View/default/Index/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/View/default/Index/_footer.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/View/default/Index/item.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/View/default/Index/_head.html",
+		"/Users/lhf/Documents/QJTY/功能说明",
+		"/Users/lhf/Documents/QJTY/注册码.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Weiba/Model/WeibaModel.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Bzjl/Controller/CategoryController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Weiba/Controller/WeibaController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Bzjl/Controller/ItemController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/Controller/BzTttController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/View/default/BzTtt/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/View/default/Base/login_base.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/View/default/Base/common.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Bzjl/config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Bzjl/BzjlAddon.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/View/default/Base/no_side_common.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Common/Common/function.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/ThinkPHP/Common/functions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/Controller/DocController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Bzdr/View/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/BusinessCard/Controller/BusinessCardColunmController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Card/Controller/CardLevelController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/View/default/Index/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/Controller/KeywordController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/ThinkPHP/Library/Vendor/phpRPC/compat.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/View/default/User/login.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/View/default/Index/help.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/Controller/Index2Controller.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Home/View/default/Index/index2.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/readme.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Bzdr/Controller/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Bzjl/Controller/BzjlController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Bzjl/Logic/ArticleLogic.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Bzjl/Logic/BaseLogic.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Bzjl/Logic/DownloadLogic.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Bzjl/Widget/CategoryWidget.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Test/Controller/TestController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Orienteering/临时",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/ThinkPHP/Mode/common.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Orienteering/Controller/TaskController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Orienteering/OrienteeringAddon.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Test/Controller/QuestionController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Orienteering/Controller/ProjectController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Orienteering/Model/OrienteeringModel.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Orienteering/Controller/OrienteeringController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Application/Admin/Controller/AddonsController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Orienteering/Model/WeixinAddonModel.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Orienteering/config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Orienteering/Controller/adfasfd.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Orienteering/Controller/aaaa.php",
+		"/Users/lhf/Downloads/ggggg",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Vote/install.sql",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Vote/Controller/VoteController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Test/Model/WeixinAddonModel.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Orienteering/Model/ProjectController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/Orienteering/Controller/adfasdf.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/Addons/ExampleLHF/Controller/ExampleLHFController.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/administrator",
+		"/Users/lhf/Documents/aaa.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp3.0/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/weiphp30/ThinkPHP/Library/Think/Db/Driver.class.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/vvv/adfasdf.php",
+		"/Users/lhf/Library/Application Support/Sublime Text 3/Packages/User/SFTP.sublime-settings",
+		"/Users/lhf/Documents/QUANJIANTIYU/Fun/ttt.asp",
+		"/Users/lhf/Documents/QUANJIANTIYU/Config.asp"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Applications/XAMPP/xamppfiles/htdocs/qjty",
+			"/Applications/XAMPP/xamppfiles/htdocs/qjty/Application/Home",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"scan",
+			"qr_admin",
+			"QrAdmin",
+			"scan",
+			"list",
+			"$list",
+			"time_format",
+			"define",
+			"inituser",
+			"$guest_login",
+			"static/",
+			"static",
+			"_initialize",
+			"build",
+			"scan",
+			"common_lists",
+			"getjson"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"__STATIC__/",
+			"__STATIC__"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Application/Home/Model/WeixinModel.class.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11062,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1220,
+								1225
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Application/Home/Controller/WeixinController.class.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11964,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7634,
+								7634
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Application/Home/Controller/AuthGroupController.class.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13985,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2974,
+								2974
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1481.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Addons/Wecome/Model/WeixinAddonModel.class.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10408,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2646,
+								2706
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Addons/Orienteering/Controller/TaskActionController.class.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2791,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1573,
+								1573
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 795.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Addons/Orienteering/Controller/TaskController.class.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3631,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1838,
+								1857
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Addons/Vote/Model/VoteOptionModel.class.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3413,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1511,
+								1524
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 631.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Addons/Vote/Model/VoteModel.class.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1386,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "Addons/Orienteering/Model/TaskActionModel.class.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3514,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								477,
+								477
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "Addons/WeiSite/Controller/FooterController.class.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 4207,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1129,
+								1180
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 46223,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										197,
+										201
+									],
+									[
+										371,
+										375
+									],
+									[
+										585,
+										589
+									],
+									[
+										757,
+										761
+									],
+									[
+										953,
+										957
+									],
+									[
+										1145,
+										1149
+									],
+									[
+										1429,
+										1433
+									],
+									[
+										1568,
+										1572
+									],
+									[
+										1594,
+										1598
+									],
+									[
+										1820,
+										1824
+									],
+									[
+										2169,
+										2173
+									],
+									[
+										2500,
+										2504
+									],
+									[
+										3981,
+										3985
+									],
+									[
+										6594,
+										6598
+									],
+									[
+										8907,
+										8911
+									],
+									[
+										10360,
+										10364
+									],
+									[
+										10592,
+										10596
+									],
+									[
+										10847,
+										10851
+									],
+									[
+										12083,
+										12087
+									],
+									[
+										15117,
+										15121
+									],
+									[
+										17323,
+										17327
+									],
+									[
+										19016,
+										19020
+									],
+									[
+										19248,
+										19252
+									],
+									[
+										19503,
+										19507
+									],
+									[
+										19880,
+										19884
+									],
+									[
+										20329,
+										20333
+									],
+									[
+										20690,
+										20694
+									],
+									[
+										21138,
+										21142
+									],
+									[
+										22662,
+										22666
+									],
+									[
+										25274,
+										25278
+									],
+									[
+										27587,
+										27591
+									],
+									[
+										29101,
+										29105
+									],
+									[
+										29500,
+										29504
+									],
+									[
+										29795,
+										29799
+									],
+									[
+										30192,
+										30196
+									],
+									[
+										30496,
+										30500
+									],
+									[
+										30854,
+										30858
+									],
+									[
+										31208,
+										31212
+									],
+									[
+										31577,
+										31581
+									],
+									[
+										31953,
+										31957
+									],
+									[
+										32338,
+										32342
+									],
+									[
+										32676,
+										32680
+									],
+									[
+										33007,
+										33011
+									],
+									[
+										33325,
+										33329
+									],
+									[
+										33694,
+										33698
+									],
+									[
+										33817,
+										33821
+									],
+									[
+										34054,
+										34058
+									],
+									[
+										34075,
+										34079
+									],
+									[
+										34290,
+										34294
+									],
+									[
+										34311,
+										34315
+									],
+									[
+										34547,
+										34551
+									],
+									[
+										34686,
+										34690
+									],
+									[
+										34754,
+										34758
+									],
+									[
+										35005,
+										35009
+									],
+									[
+										35751,
+										35755
+									],
+									[
+										36114,
+										36118
+									],
+									[
+										36495,
+										36499
+									],
+									[
+										36551,
+										36555
+									],
+									[
+										36572,
+										36576
+									],
+									[
+										37135,
+										37139
+									],
+									[
+										37860,
+										37864
+									],
+									[
+										38139,
+										38143
+									],
+									[
+										38190,
+										38194
+									],
+									[
+										38492,
+										38496
+									],
+									[
+										38651,
+										38655
+									],
+									[
+										38863,
+										38867
+									],
+									[
+										39032,
+										39036
+									],
+									[
+										39384,
+										39388
+									],
+									[
+										40073,
+										40077
+									],
+									[
+										40323,
+										40327
+									],
+									[
+										40616,
+										40620
+									],
+									[
+										40892,
+										40896
+									],
+									[
+										41368,
+										41372
+									],
+									[
+										41977,
+										41981
+									],
+									[
+										42229,
+										42233
+									],
+									[
+										42732,
+										42736
+									],
+									[
+										43008,
+										43012
+									],
+									[
+										43219,
+										43223
+									],
+									[
+										43678,
+										43682
+									],
+									[
+										43757,
+										43761
+									],
+									[
+										43959,
+										43963
+									],
+									[
+										44256,
+										44260
+									],
+									[
+										44467,
+										44471
+									],
+									[
+										44926,
+										44930
+									],
+									[
+										45005,
+										45009
+									],
+									[
+										45207,
+										45211
+									],
+									[
+										45496,
+										45500
+									],
+									[
+										45775,
+										45779
+									],
+									[
+										46070,
+										46074
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								1031,
+								1031
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ 	].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "Addons/Orienteering/Model/WeixinAddonModel.class.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1248,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1026,
+								1026
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "Application/Common/Common/function.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 98289,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								31321,
+								31600
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 20272.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 216.0
+	},
+	"pinned_build_system": "",
+	"project": "qjtyPHP.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"/Applications/XAMPP/xamppfiles/htdocs/weiphp3/weiphp.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 348.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

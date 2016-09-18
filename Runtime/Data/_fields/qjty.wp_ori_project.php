@@ -1,0 +1,1 @@
+a:8:{i:0;s:2:"id";i:1;s:12:"project_name";i:2;s:5:"ctime";i:3;s:8:"ori_date";i:4;s:10:"ori_status";i:5;s:5:"token";s:3:"_pk";s:2:"id";s:5:"_type";a:6:{s:2:"id";s:16:"int(10) unsigned";s:12:"project_name";s:12:"varchar(255)";s:5:"ctime";s:7:"int(10)";s:8:"ori_date";s:7:"int(10)";s:10:"ori_status";s:12:"varchar(255)";s:5:"token";s:12:"varchar(255)";}}
