@@ -1,7 +1,7 @@
 <?php
 return array (
 		'title' => array (
-				'title' => '封面标题:',
+				'title' => '手机首页标题:',
 				'type' => 'text',
 				'value' => '点击进入首页',
 				'tip' => '' 
@@ -18,23 +18,14 @@ return array (
 				'value' => '',
 				'tip' => '' 
 		),
-		'show_background' => array (
-				'title' => '显示模板背景图',
-				'type' => 'radio',
-				'value' => '1',
-				'options' => array (
-						'0' => '不显示',
-						'1' => '显示' 
-				),
-				'tip' => '' 
+		'project_status_lookup4' => array (
+				'title' => '线路状态:',
+				'type' => 'hidden',
+				'value' => '01:草稿
+02:进行中
+03:结束',
+				'tip' => '请不要修改' 
 		),
-		'background' => array (
-				'title' => '模板背景图:',
-				'type' => 'mult_picture',
-				'value' => '',
-				'tip' => '为空时默认使用模板里的背景图片，最佳尺寸：640X1156' 
-		),
-		
 		'code' => array (
 				'title' => '统计代码:',
 				'type' => 'textarea',

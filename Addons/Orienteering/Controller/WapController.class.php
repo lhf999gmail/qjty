@@ -21,7 +21,7 @@ class WapController extends AddonsController{
 		$act = strtolower ( _ACTION );
 		$temp = $config ['template_' . $act];
 		$act = ucfirst ( $act );
-		$this->assign ( 'page_title', $config ['title'] );
+		$this->assign ( 'page_title', '定向赛' );
 		define ( 'CUSTOM_TEMPLATE_PATH', ONETHINK_ADDON_PATH . 'Orienteering/View/default/Template' );
 	}
 
@@ -84,18 +84,19 @@ class WapController extends AddonsController{
 			//$this->assign ( 'publicid', $public_info ['id'] );
 			//$this->assign ( 'manager_id', $this->mid );
 
-			$this->_footer ();
+			$this->_footer (1);
 
-
-			$this->display ( ONETHINK_ADDON_PATH . 'Orienteering/View/default/TemplateIndex/SimpleV1/index.html' );
+			$this->assign ( 'page_title', '定向赛_首页' );
+			$this->display ( ONETHINK_ADDON_PATH . 'Orienteering/View/default/Wap/index/index.html' );
 
 		}
 	}
 			// 3G页面底部导航
-	function _footer($temp_type = 'weiphp') {
+	function _footer($cur_num = 1) {
 		
 			$list = D ( 'Addons://Orienteering/Footer' )->get_list ();
 			
+
 			foreach ( $list as $k => $vo ) {
 				if ($vo ['pid'] != 0)
 					continue;
@@ -103,7 +104,8 @@ class WapController extends AddonsController{
 				$one_arr [$vo ['id']] = $vo;
 				unset ( $list [$k] );
 			}
-			
+
+			$i = 0;
 			foreach ( $one_arr as &$p ) {
 				$two_arr = array ();
 				foreach ( $list as $key => $l ) {
@@ -115,9 +117,20 @@ class WapController extends AddonsController{
 				}
 				
 				$p ['child'] = $two_arr;
+				//Felix 20160919
+				$i = $i+ 1;
+				if ($i == $cur_num){
+					$p['class'] = 'item cur';
+				}else{
+					$p['class'] = 'item';
+				}
+
+
 			}
+
+			//dump($one_arr);
 			$this->assign ( 'footer', $one_arr );
-			$html = $this->fetch ( ONETHINK_ADDON_PATH . 'Orienteering/View/default/TemplateFooter/V2/footer.html' );
+			$html = $this->fetch ( ONETHINK_ADDON_PATH . 'Orienteering/View/default/Wap/_footer/footer.html' );
 			$this->assign ( 'footer_html', $html );
 		
 	}
@@ -131,13 +144,75 @@ class WapController extends AddonsController{
 		) );
 		$this->assign ( 'url', $url );
 		
-		$config = get_addon_config ( 'Orienteering' );
+		// $config = get_addon_config ( 'Orienteering' );
 		
-		$config ['background_arr'] = explode ( ',', $config ['background'] );
-		$config ['background'] = $config ['background_arr'] [0];
-		$this->assign ( 'data', $config );
+		// $config ['background_arr'] = explode ( ',', $config ['background'] );
+		// $config ['background'] = $config ['background_arr'] [0];
+		// $this->assign ( 'data', $config );
 		
+		$this->assign ( 'page_title', '定向赛_预览' );
 		$this->display ();
 	}
+
+	function notice()
+	{
+		//dump(get_openid ());
+		$map ['token'] = get_token ();
+		$map ['status'] = 1;
+		$notice = M ( 'ori_notice' )->where ( $map )->order ( 'id desc' )->select ();
+		foreach ( $notice as &$vo ) {
+			$vo ['conver'] = get_cover_url ( $vo ['conver'] );
+			// empty ( $vo ['url'] ) && $vo ['url'] = addons_url ( 'WeiSite://WeiSite/lists', array (
+			// 		'cate_id' => $vo ['id'] 
+			// ) );
+		}
+		//dump($notice);
+		$this->assign ( 'lists', $notice );
+
+		$this->_footer (2);
+		$this->assign ( 'page_title', '定向赛_公告' );
+		$this->display ( ONETHINK_ADDON_PATH . 'Orienteering/View/default/Wap/notice/lists.html' );
+		//$this->display();
+	}
+	function project()
+	{
+		//dump(get_openid ());
+		$map ['token'] = get_token ();
+		//$map ['ori_status'] = '';
+		$lists = M ( 'ori_project' )->where ( $map )->order ( 'ori_date desc,id desc' )->select ();
+		foreach ( $lists as &$vo ) {
+			$vo ['conver'] = get_cover_url ( $vo ['conver'] );
+			$vo ['intro'] = str_replace ( chr ( 10 ), '<br/>', $vo ['intro'] );
+			// empty ( $vo ['url'] ) && $vo ['url'] = addons_url ( 'WeiSite://WeiSite/lists', array (
+			// 		'cate_id' => $vo ['id'] 
+			// ) );
+		}
+		//dump($notice);
+		$this->assign ( 'lists', $lists );
+
+		$this->_footer (3);
+		$this->assign ( 'page_title', '定向赛_赛事' );
+		$this->display ( ONETHINK_ADDON_PATH . 'Orienteering/View/default/Wap/project/lists.html' );
+		//$this->display();
+	}
+	function project_detail()
+	{
+		//dump(get_openid ());
+
+		$map ['id'] = I ( 'get.id', 0, 'intval' );
+		$info = M ( 'ori_project' )->where ( $map )->find ();
+
+			// dump($info);exit;
+
+		$this->assign ( 'info', $info );
+		//dump($notice);
+		
+		$this->_footer (3);
+		$this->assign ( 'page_title', '定向赛_'.$info['project_name'] );
+		$this->display ( ONETHINK_ADDON_PATH . 'Orienteering/View/default/Wap/project/detail.html' );
+		//$this->display();
+	}
+
+
 
 }

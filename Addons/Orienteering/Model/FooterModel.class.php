@@ -37,7 +37,7 @@ class FooterModel extends Model {
 
 		$data['id'] = 2;
 		$data['title'] = '公告';
-		$data['url'] = addons_url("Orienteering://Wap/index");
+		$data['url'] = addons_url("Orienteering://Wap/notice");
 		$data['pid'] = 0;
 		$data['sort'] = 2;
 		$data['icon'] = 61;
@@ -47,7 +47,7 @@ class FooterModel extends Model {
 
 		$data['id'] = 3;
 		$data['title'] = '赛事';
-		$data['url'] = addons_url("Orienteering://Wap/index");
+		$data['url'] = addons_url("Orienteering://Wap/project");
 		$data['pid'] = 0;
 		$data['sort'] = 3;
 		$data['icon'] = 60;

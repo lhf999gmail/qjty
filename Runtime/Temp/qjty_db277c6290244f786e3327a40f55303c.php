@@ -1,0 +1,3 @@
+<?php
+//000000086400a:17:{s:2:"id";s:1:"1";s:7:"keyword";s:4:"hhhh";s:12:"keyword_type";s:1:"0";s:5:"title";s:4:"klkl";s:5:"intro";s:10:"uipoupouio";s:5:"mTime";s:10:"1474271360";s:5:"cover";s:1:"8";s:5:"cTime";s:10:"1474271360";s:5:"token";s:15:"gh_b23feae36317";s:10:"experience";s:1:"0";s:3:"num";s:1:"8";s:9:"coupon_id";s:2:"-1";s:10:"coupon_num";s:1:"0";s:11:"receive_num";s:1:"0";s:7:"content";s:15:"<p>kljkljkl</p>";s:8:"template";s:7:"default";s:15:"more_button_arr";N;}
+?>

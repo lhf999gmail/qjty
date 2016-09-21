@@ -6,6 +6,7 @@ use Home\Controller\AddonsController;
 class OrienteeringController extends AddonsController{
     
     var $model;
+    var $config;
 	function _initialize() {
 		//parent::_initialize ();
 
@@ -27,11 +28,24 @@ class OrienteeringController extends AddonsController{
 		$res ['class'] = $Controller == 'taskaction' ? 'current' : '';
 		$nav [] = $res;
 
-		$res ['title'] = '手机端配置';
-		$res ['url'] = addons_url ( 'Orienteering://WapConfig/config');
-		$res ['class'] = $Controller == 'wap' ? 'current' : '';
+		$res ['title'] = '公告';
+		$res ['url'] = addons_url ( 'Orienteering://Notice/lists');
+		$res ['class'] = $Controller == 'notice' ? 'current' : '';
 		$nav [] = $res;
 
+		// $res ['title'] = '手机端配置';
+		// $res ['url'] = addons_url ( 'Orienteering://WapConfig/config');
+		// $res ['class'] = $Controller == 'wap' ? 'current' : '';
+		// $nav [] = $res;
+
+		$res ['title'] = '配置';
+		$res ['url'] = addons_url ( 'Orienteering://Orienteering/config');
+		$res ['class'] = $Controller == 'orienteering' ? 'current' : '';
+		$nav [] = $res;
+
+
+		
+//addon/Orienteering/Orienteering/config
 
 		//显示导航条
 		// $param ['type'] = 2;

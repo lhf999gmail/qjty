@@ -127,13 +127,16 @@
             </tbody>
           </table>
         </div>
-      </div>      
+    </div>      
       <div class="controls" style="display:none">
         <label class="item-label"> 详细介绍<span class="check-tips">为空默认只显示描述</span> </label>
         <textarea name="content" style="width:405px; height:100px;">{$data.content}</textarea>
         {:hook('adminArticleEdit', array('name'=>'content','value'=>$data[content]))} </div>
-    </div>
-    <div class="form-item form_bh">
+  
+      </div>
+
+
+        <div class="form-item form_bh">
       <input type="hidden" name="id" value="{$data.id}">
       <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
     </div>
@@ -197,6 +200,7 @@
       <div class="form-item form_bh">
       <div class="btn_bar"><a href="javascript:;" class="btn confirm_btn">确定</a>&nbsp;&nbsp;<a href="javascript:;" class="border-btn cancel_btn">取消</a></div>
     </div>
+    
   </div>
 </div>
 </section>

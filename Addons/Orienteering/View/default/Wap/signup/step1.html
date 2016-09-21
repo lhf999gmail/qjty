@@ -1,0 +1,113 @@
+<include file="Public/mobile_head"/>
+<link href="{:ADDON_PUBLIC_PATH}/css.css?v={:SITE_VERSION}" rel="stylesheet" type="text/css">
+<body>
+    <div id="container" class="container body">
+        <div >
+            <notempty name="info.cover"><img src="{$info.cover|get_cover_url}"/></notempty>
+            <p style="word-wrap:break-word;">{$info.project_name}</p>
+        </div>
+
+      
+            
+
+        <div class="block_content_bg m_10"> 
+            <div class="block_content_top_min">
+                <center>报名须知</center>
+            </div>
+            <!-- 表单 -->
+            <form id="form" action="{:U('step1?id='.$info['id'])}" method="post" class="form-horizontal p_10">
+              <div class="form-item cf">
+                  <label class="item-label"><span class="check-tips">{$info.signup_notice}</span></label>
+              </div>
+              <div class="form-item cf">
+                  <label class="checkbox"> 
+                  <input type="checkbox" value="1" name="agree" checked="checked">
+                        同意协议</label>
+              </div>
+              <div class="form-item cf">
+                  <!-- <input type="hidden" name="id" value="{$data.id}"> -->
+                   <button class="home_btn submit-btn mb_10 mt_10" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+            
+            </div>
+        </form>
+
+      </div>
+       <p class="copyright">{$system_copy_right}</p>
+  </div>
+  <include file="Public/mobile_foot"/>
+<script type="text/javascript">
+    $.WeiPHP.initWxShare({
+        title:"{$forms.title}",
+        imgUrl:"{$forms.cover}",
+        desc:"{$forms.intro}",
+        link:window.location.href
+    })
+</script>
+ <block name="script">
+ <link href="{:SITE_URL}/Public/static/datetimepicker/css/datetimepicker.css?v={:SITE_VERSION}" rel="stylesheet" type="text/css">
+
+  <link href="{:SITE_URL}/Public/static/datetimepicker/css/dropdown.css?v={:SITE_VERSION}" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="{:SITE_URL}/Public/static/datetimepicker/js/bootstrap-datetimepicker.min.js"></script> 
+  <script type="text/javascript" src="{:SITE_URL}/Public/static/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js?v={:SITE_VERSION}" charset="UTF-8"></script>
+<script type="text/javascript">
+$('#submit').click(function(){
+
+   // $('#form').submit();
+   $.Dialog.loading();
+   $.ajax({
+//     url:'{:U('add?model='.$model['id'])}',
+       url:"{:U('step1?id='.$info['id'])}",
+       type:'post',
+       data:$('#form').serializeArray(),
+       dataType:'json',
+       success:function(json){
+            //$.Dialog.close();
+            if(json.status==1){
+                    
+                    $.Dialog.success(json.info);
+                    //alert('2');
+               }else{
+                    $.Dialog.fail(json.info);
+                    //alert('3');
+            }
+           if(json.url!=""){
+               setTimeout(function(){
+                   window.location.href=json.url;
+                   },2000);
+               }
+        },
+        error:function(){
+                $.Dialog.close();
+             //$.Dialog.fail();
+            }
+       });
+});
+
+$(function(){
+       $('.time').datetimepicker({
+        format: 'yyyy-mm-dd hh:ii',
+        language:"zh-CN",
+        minView:0,
+        autoclose:true
+    });
+
+});
+</script> 
+
+
+<!-- 底部导航 -->
+{$footer_html}
+<!-- 统计代码 -->
+<notempty name="config.code">
+<p class="hide bdtongji">
+{$config.code}
+</p>
+<else />
+<p class="hide bdtongji">
+{$tongji_code}
+</p>
+</notempty>
+</body>
+<script type="text/javascript">
+</script>
+</html>

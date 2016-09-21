@@ -1,0 +1,36 @@
+<include file="Public/mobile_head"/>	
+<link href="Public/detail.css?v={:SITE_VERSION}" rel="stylesheet" type="text/css">
+<body id="weisite">
+<div class="container">
+	<div class="detail top_line">
+    	
+        <section class="content">
+                <notempty name="info.cover">
+                  <p><img src="{$info.cover|get_cover_url}"/></p>
+                </notempty>
+                <h6 class="title">{$info.project_name}</h6>
+        		<p class="info"><span class="colorless">{$info.ori_date|day_format}</span></p>
+        		<h6 class="title">
+                    <a href="{:addons_url('Orienteering://WapSignup/step1',array('id'=>$info['id']))}">［我要报名］</a>
+
+                </p>
+                {$info.content|htmlspecialchars_decode}
+        </section>
+    </div>
+</div>
+<!-- 底部导航 -->
+{$footer_html}
+<!-- 统计代码 -->
+<notempty name="config.code">
+<p class="hide bdtongji">
+{$config.code}
+</p>
+<else />
+<p class="hide bdtongji">
+{$tongji_code}
+</p>
+</notempty>
+</body>
+<script type="text/javascript">
+</script>
+</html>

@@ -1,0 +1,4 @@
+2016-09-19 08:09:11 Error Info : curl falied. Error Info: Couldn't resolve host 'api.weixin.qq.com'
+2016-09-21 08:11:02 Error Info : curl falied. Error Info: Couldn't resolve host 'api.weixin.qq.com'
+2016-09-21 09:06:44 Error Info : curl falied. Error Info: Couldn't resolve host 'api.weixin.qq.com'
+2016-09-21 09:10:21 Error Info : curl falied. Error Info: Couldn't resolve host 'api.weixin.qq.com'
